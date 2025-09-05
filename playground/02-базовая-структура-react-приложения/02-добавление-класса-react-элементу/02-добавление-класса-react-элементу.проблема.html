@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление класса в React</title>
+    <style>
+        .title {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        // Создайте элемент <h1> с текстом "Привет из React!" и добавьте класс "title"
+				const h1 = React.createElement('h1', { className: 'title' }, 'Привет из JS!');
+
+        // Создайте корневой контейнер с помощью createRoot() как в прошлом задании
+				const root = ReactDOM.createRoot(
+					document.getElementById("root")
+				)
+
+        // Вставьте элемент <h1> в <div> с id="root"
+				root.render(h1)
+    </script>
+</body>
+</html>

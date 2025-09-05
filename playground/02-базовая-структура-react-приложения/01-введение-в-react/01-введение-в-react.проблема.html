@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Введение в React</title>
+
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        // Теперь нужно переписать код с использованием React
+
+        // Создайте элемент <h1> с помощью createElement, заменив document.createElement
+				// Нужно переписать с использованием параметра children в createElement
+        const h1 = React.createElement('h1', null, 'Привет из JS!');
+
+        // Создайте корневой контейнер с помощью createRoot(корневой элемент)
+				const root = ReactDOM.createRoot(
+					document.getElementById('root')
+				);
+
+        // Эту строчку нужно заменить на render(), который возьмем из createRoot()
+        root.render(h1);
+    </script>
+</body>
+</html>
