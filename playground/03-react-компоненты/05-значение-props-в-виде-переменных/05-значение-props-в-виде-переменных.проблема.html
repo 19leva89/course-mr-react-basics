@@ -26,6 +26,9 @@
 
     <script type="text/babel">
         // Нужно вынести значения props в переменные.
+        const title = "Привет из React компонента!";
+        const text = "Это текст из компонента P";
+
         function Title({text}) {
             return <h1 className="title">{text}</h1>;
         }
@@ -39,8 +42,8 @@
         }
 
         const elements = <Container>
-            <Title text="Привет из React компонента!" />
-            <Text text="Это текст из компонента P" />
+            <Title text={title} />
+            <Text text={text} />
         </Container>;
 
         const root = ReactDOM.createRoot(document.getElementById('root'));

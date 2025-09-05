@@ -2,8 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Значение props в виде переменных</title>
-
+    <title>React компоненты</title>
     <style>
         .container {
             display: flex;
@@ -25,23 +24,28 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        // Нужно вынести значения props в переменные.
-        function Title({text}) {
-            return <h1 className="title">{text}</h1>;
+        // Изменить названия функций title на Title.
+        function Title() {
+            return <h1 className="title">Привет из React!</h1>;
         }
 
-        function Text({text}) {
-            return <p className="text">{text}</p>;
+        // Изменить названия функций text на Text.
+        function Text() {
+            return <p className="text">Этот текст будет синим</p>;
         }
 
+        // Изменить названия функций container на Container.
         function Container({children}) {
             return <div className="container">{children}</div>;
         }
+        
+        const elements = (
+				<Container>
+          <Title />
 
-        const elements = <Container>
-            <Title text="Привет из React компонента!" />
-            <Text text="Это текст из компонента P" />
-        </Container>;
+          <Text />
+        </Container>
+				)
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
 

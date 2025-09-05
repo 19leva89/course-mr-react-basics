@@ -2,8 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Значение props в виде переменных</title>
-
+    <title>Props компонента</title>
     <style>
         .container {
             display: flex;
@@ -25,7 +24,6 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        // Нужно вынести значения props в переменные.
         function Title({text}) {
             return <h1 className="title">{text}</h1>;
         }

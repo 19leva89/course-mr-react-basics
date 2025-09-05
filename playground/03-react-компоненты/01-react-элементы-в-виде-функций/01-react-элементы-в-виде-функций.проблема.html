@@ -27,20 +27,30 @@
         const title = "Привет из React!";
         const text = "Этот текст будет синим";
 
+				function titleFunc(titleText) {
+					return <h1 className="title">{titleText}</h1>
+				}
+
+				function textFunc(text) {
+					return <p className="text">{text}</p>
+				}
+
+        function containerFunc(titleText, textText) {
+            return <div className="container">{titleText}{textText}</div>;
+        }
+
         //Вынести <h1> в отдельные функцию и передать в нее текст через аргумент.
-        const titleElement = <h1 className="title">{title}</h1>;
+        const titleElement = titleFunc(title);
+
         // Вынести <p> в отдельные функцию и передать в нее текст через аргумент.
-        const textElement = <p className="text">{text}</p>;
+        const textElement = textFunc(text);
 
         //Создать функцию для <div> и передать в нее <h1> и <p> через аргументы
-        const container = <div className="container">
-            {titleElement}
-            {textElement}
-        </div>
+        const elements = containerFunc(titleElement, textElement);
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
 
-        root.render(container);
+        root.render(elements);
     </script>
 </body>
 </html>
